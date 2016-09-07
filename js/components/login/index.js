@@ -30,7 +30,7 @@ class Login extends Component {
               <View style={styles.mainContainer}>
                 <View style={styles.innerContainer}>
                   <View style={styles.imageView}>
-                    <Image source={require('../../../images/Wikimedia-logo.png')} style={styles.topBarImageStyle}></Image>
+                    <Image source={require('../../../images/dharma-logo.png')} style={styles.topBarImageStyle}></Image>
                   </View>
                   <View style={styles.inputView}>
                     <TextInput value={this.state.username} onFocus={()=>this.setState({username:''})} onChangeText={(text) => this.setState({username:text})} style={styles.textInputStyle}/>

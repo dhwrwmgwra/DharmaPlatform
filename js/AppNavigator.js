@@ -12,7 +12,8 @@ import Navigator from 'Navigator';
 
 import Login from './components/login/';
 import Home from './components/home/';
-import ProjectDetails from './components/project-details/';
+import TimeSeriesProject from './components/time-series-project/';
+import LongitudinalProject from './components/longitudinal-project/';
 import SingleEntry from './components/single-entry';
 import MultiEntryGreen from './components/multi-form-green';
 import MultiEntryRed from './components/multi-form-red';
@@ -158,7 +159,8 @@ class AppNavigator extends Component {
               return Navigator.SceneConfigs.FloatFromRight;
           case 'home':
               return Navigator.SceneConfigs.FloatFromRight;
-          case 'project-details':
+          case 'longitudinal-project':
+          case 'time-series-project':
               return Navigator.SceneConfigs.FloatFromRight;
           case 'single-entry':
               return Navigator.SceneConfigs.FloatFromBottom;
@@ -178,8 +180,10 @@ class AppNavigator extends Component {
                 return <Login navigator={navigator} />;
             case 'home':
                 return <Home navigator={navigator} />;
-            case 'project-details':
-                return <ProjectDetails navigator={navigator} />;
+            case 'longitudinal-project':
+                return <LongitudinalProject navigator={navigator} />;
+            case 'time-series-project':
+                return <TimeSeriesProject navigator={navigator} />;
             case 'single-entry':
                 return <SingleEntry navigator={navigator} />;
             case 'multi-entry-red':
