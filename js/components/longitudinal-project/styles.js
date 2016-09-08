@@ -8,7 +8,7 @@ var {width, height} = Dimensions.get('window');
 module.exports = StyleSheet.create({
   mainContainer:{
     flex:1,
-    backgroundColor:'rgba(0,0,0,0.987131313)',
+    backgroundColor:'rgba(52,52,52,1)',
   },
   topBar:{
     backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
@@ -19,21 +19,26 @@ module.exports = StyleSheet.create({
     width:width-4,
   },
   topBarTop:{
+    flex:1,
     flexDirection: 'row',
     alignItems: 'center',
-    width: width/3.6,
     justifyContent: 'space-between',
     marginTop:10,
     marginLeft:10,
     marginBottom:10,
   },
+  projectNameView:{
+    flex:6
+  },
   projectName:{
-    alignSelf:'center',
+    alignSelf:'flex-start',
     alignItems:'center',
     color:'rgba(255,255,255,1)',
-    marginLeft:80,
-    fontSize:20,
+    fontSize:18,
     fontWeight:'400'
+  },
+  backIconView:{
+    flex:1
   },
   backIcon:{
     color:'white',
@@ -43,6 +48,7 @@ module.exports = StyleSheet.create({
     fontWeight:'100'
   },
   topBarBottom:{
+    flex:1,
     flexDirection:'row',
     backgroundColor:'white',
     // justifyContent:'space-between',
@@ -66,7 +72,7 @@ module.exports = StyleSheet.create({
     // marginRight:20,
   },
   middleBottomBar:{
-    flex:4
+    flex:6
   },
   searchIcon:{
     color:'rgba(0,0,0,0.5)',
@@ -74,10 +80,10 @@ module.exports = StyleSheet.create({
   searchBoxStyle:{
     height:40,
     color:'rgba(0,0,0,0.5)',
-    fontSize:15,
-    padding:20,
+    fontSize:14,
+    // padding:20,
     fontWeight:'800',
-    width:width-100,
+    // width:width-100,
   },
   qrCodeIcon:{
     color:'rgba(0,0,0,0.5)',

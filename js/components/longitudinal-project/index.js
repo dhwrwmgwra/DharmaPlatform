@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute , replaceRoute } from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView,TextInput} from 'react-native';
-import { Icon } from 'native-base';
+import  Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
 class LongitudinalProject extends Component {
@@ -29,10 +29,12 @@ class LongitudinalProject extends Component {
           <View style={styles.mainContainer}>
             <View style={styles.topBar}>
               <View style={styles.topBarTop}>
-                  <TouchableOpacity onPress={this.popRoute.bind(this)} >
+                  <TouchableOpacity onPress={this.popRoute.bind(this)} style={styles.backIconView}>
                     <Icon name="md-arrow-round-back" style={styles.backIcon}/>
                   </TouchableOpacity>
-                  <Text style={styles.projectName}>PROJECT NAME RECORDS</Text>
+                  <View style={styles.projectNameView}>
+                    <Text style={styles.projectName}>PROJECT NAME RECORDS</Text>
+                  </View>
               </View>
               <View style={styles.topBarBottom}>
                 <View style={styles.leftBottomBar}>

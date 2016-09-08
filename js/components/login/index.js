@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import { DeviceEventEmitter, Dimensions, Image ,View,TextInput,Text, TouchableOpacity} from 'react-native';
+import {Container, Content } from 'native-base'
 import { connect } from 'react-redux';
 
 import { replaceRoute } from '../../actions/route';
@@ -27,7 +28,6 @@ class Login extends Component {
 
     render() {
         return (
-              <View style={styles.mainContainer}>
                 <View style={styles.innerContainer}>
                   <View style={styles.imageView}>
                     <Image source={require('../../../images/dharma-logo.png')} style={styles.topBarImageStyle}></Image>
@@ -42,7 +42,6 @@ class Login extends Component {
                     </TouchableOpacity>
                   </View>
                 </View>
-              </View>
         )
     }
 }

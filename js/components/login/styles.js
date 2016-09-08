@@ -7,21 +7,19 @@ var { StyleSheet, Dimensions } = React;
 var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 module.exports = StyleSheet.create({
-    mainContainer:{
-      flex:1,
-      backgroundColor:'rgba(0,0,0,0.987131313)',
-    },
+    // mainContainer:{
+    //   flex:1,
+    //   backgroundColor:'rgba(52,52,52,1)',
+    // },
     innerContainer:{
       flex:1,
       backgroundColor:'#292B31',
       alignItems:'center',
       justifyContent:'flex-start',
       flexDirection:'column',
-      top:20,
-      left: 2,
+      top:0,
+      left: 0,
       right: 0,
-      width:width-4,
-      marginBottom:22,
     },
     imageView:{
       marginTop:50,

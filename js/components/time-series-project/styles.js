@@ -8,32 +8,36 @@ var {width, height} = Dimensions.get('window');
 module.exports = StyleSheet.create({
   mainContainer:{
     flex:1,
-    backgroundColor:'rgba(0,0,0,0.987131313)',
   },
   topBar:{
     backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
     position:'absolute',
-    top:20,
-    left: 2,
+    paddingTop:20,
+    left: 0,
     right: 0,
-    width:width-4,
   },
   topBarTop:{
+    flex:1,
     flexDirection: 'row',
     alignItems: 'center',
-    width: width/3.6,
     justifyContent: 'space-between',
     marginTop:10,
     marginLeft:10,
     marginBottom:10,
   },
   projectName:{
-    alignSelf:'center',
+    alignSelf:'flex-start',
     alignItems:'center',
     color:'rgba(255,255,255,1)',
-    marginLeft:80,
     fontSize:20,
+    marginLeft:10,
     fontWeight:'400'
+  },
+  projectNameView:{
+    flex:3,
+  },
+  backIconView:{
+    flex:1
   },
   backIcon:{
     color:'white',
@@ -65,11 +69,10 @@ module.exports = StyleSheet.create({
     // marginRight:20,
   },
   scrollView:{
-    left:2,
-    width:width-4,
+    left:0,
     marginTop:150,
     backgroundColor:'rgba(255,255,255,0.9)',
-    marginBottom:2,
+    marginBottom:0,
     padding:10,
   },
   textHeader:{
@@ -124,10 +127,9 @@ module.exports = StyleSheet.create({
   bottomBar:{
     backgroundColor:'#68BD45', flexDirection: 'column', justifyContent: 'space-between',
     position:'absolute',
-    bottom:2,
-    left: 2,
+    bottom:0,
+    left: 0,
     right: 0,
-    width:width-4,
     height:50,
     flexDirection:'row',
     alignItems: 'center',
@@ -146,7 +148,6 @@ module.exports = StyleSheet.create({
     fontSize:28,
     fontWeight:'600',
     marginLeft:5,
-    // paddingBottom:25,
   },
   newFormView:{
     flex:3,

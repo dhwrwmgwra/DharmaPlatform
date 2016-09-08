@@ -8,20 +8,19 @@ var {width, height} = Dimensions.get('window');
 module.exports = StyleSheet.create({
   mainContainer:{
     flex:1,
-    backgroundColor:'rgba(0,0,0,0.987131313)',
+    // backgroundColor:'rgba(52,52,52,1)',
   },
   topBar:{
     backgroundColor:'#FE6060', flexDirection: 'column', justifyContent: 'space-between',
     position:'absolute',
-    top:20,
-    left: 2,
+    paddingTop:20,
+    left: 0,
     right: 0,
-    width:width-4,
   },
   topBarTop:{
+    flex:1,
     flexDirection: 'row',
     alignItems: 'center',
-    width: width/3.6,
     justifyContent: 'space-between',
     marginTop:10,
     marginLeft:10,

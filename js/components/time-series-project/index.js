@@ -7,10 +7,10 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute , replaceRoute } from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView} from 'react-native';
-import { Container, Content, Icon } from 'native-base';
+import  Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
-class ProjectDetails extends Component {
+class TimeSeriesProject extends Component {
   constructor(props) {
       super(props);
     }
@@ -29,12 +29,14 @@ class ProjectDetails extends Component {
         return (
           <View style={styles.mainContainer}>
             <View style={styles.topBar}>
-              <View style={styles.topBarTop}>
-                  <TouchableOpacity onPress={this.popRoute.bind(this)} >
-                    <Icon name="md-arrow-round-back" style={styles.backIcon}/>
-                  </TouchableOpacity>
+            <View style={styles.topBarTop}>
+                <TouchableOpacity onPress={this.popRoute.bind(this)} style={styles.backIconView}>
+                  <Icon name="md-arrow-round-back" style={styles.backIcon}/>
+                </TouchableOpacity>
+                <View style={styles.projectNameView}>
                   <Text style={styles.projectName}>PROJECT NAME</Text>
-              </View>
+                </View>
+            </View>
               <View style={styles.topBarBottom}>
                 <View style={styles.leftBottomBar}>
                   <Text style={{fontSize:15,fontWeight:'600',color:'rgba(0,0,0,0.799)',padding:2}}>Project Name</Text>
@@ -102,4 +104,4 @@ function bindAction(dispatch) {
         popRoute:()=>dispatch(popRoute())
     }
 }
-export default connect(null, bindAction)(ProjectDetails);
+export default connect(null, bindAction)(TimeSeriesProject);

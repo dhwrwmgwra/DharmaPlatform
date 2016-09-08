@@ -8,15 +8,13 @@ var {width, height} = Dimensions.get('window');
 module.exports = StyleSheet.create({
   mainContainer:{
     flex:1,
-    backgroundColor:'rgba(0,0,0,0.987131313)',
   },
     topBar:{
       backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
       position:'absolute',
-      top:20,
-      left: 2,
+      paddingTop:20,
+      left: 0,
       right: 0,
-      width:width-4,
     },
     topBarTop:{
       flexDirection:'row',
@@ -54,10 +52,9 @@ module.exports = StyleSheet.create({
     },
     scrollView:{
       marginTop:157,
-      left:2,
-      width:width-4,
+      left:0,
       backgroundColor:'rgba(255,255,255,0.8999)',
-      marginBottom:2,
+      marginBottom:0,
       paddingTop:10,
     },
     projectCards:{

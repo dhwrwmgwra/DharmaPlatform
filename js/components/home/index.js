@@ -60,7 +60,7 @@ class Home extends Component {
                       </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.projectCards} onPress={this.gotoLongitudinalProject.bind(this)}>
+                <TouchableOpacity style={styles.projectCards} onPress={this.gotoTimeSeriesProject.bind(this)}>
                     <Text style={styles.projectTitle}>Logitudinal Project Name</Text>
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
@@ -96,7 +96,7 @@ class Home extends Component {
                       </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.projectCards} onPress={this.gotoLongitudinalProject.bind(this)}>
+                <TouchableOpacity style={styles.projectCards} onPress={this.gotoTimeSeriesProject.bind(this)}>
                     <Text style={styles.projectTitle}>Longitudinal Project Name</Text>
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
@@ -132,7 +132,7 @@ class Home extends Component {
                       </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.projectCards} onPress={this.gotoLongitudinalProject.bind(this)}>
+                <TouchableOpacity style={styles.projectCards} onPress={this.gotoTimeSeriesProject.bind(this)}>
                     <Text style={styles.projectTitle}>Longitudinal Project Name</Text>
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>

@@ -8,32 +8,37 @@ var {width, height} = Dimensions.get('window');
 module.exports = StyleSheet.create({
   mainContainer:{
     flex:1,
-    backgroundColor:'rgba(0,0,0,0.987131313)',
+    // backgroundColor:'rgba(52,52,52,1)',
   },
   topBar:{
     backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
     position:'absolute',
-    top:20,
-    left: 2,
+    paddingTop:20,
+    left: 0,
     right: 0,
-    width:width-4,
   },
   topBarTop:{
+    flex:1,
     flexDirection: 'row',
     alignItems: 'center',
-    width: width/3.6,
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     marginTop:10,
     marginLeft:10,
     marginBottom:10,
   },
   projectName:{
-    alignSelf:'center',
+    alignSelf:'flex-start',
     alignItems:'center',
     color:'rgba(255,255,255,1)',
-    marginLeft:80,
     fontSize:20,
+    marginLeft:20,
     fontWeight:'400'
+  },
+  projectNameView:{
+    flex:3,
+  },
+  backIconView:{
+    flex:1
   },
   backIcon:{
     color:'white',
@@ -43,8 +48,7 @@ module.exports = StyleSheet.create({
     fontWeight:'100'
   },
   scrollView:{
-    left:2,
-    width:width-4,
+    left:0,
     marginTop:64,
     backgroundColor:'rgba(255,255,255,0.9)',
     marginBottom:2,

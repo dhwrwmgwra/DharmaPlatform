@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute , replaceRoute , pushNewRoute} from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView, TextInput} from 'react-native';
-import { Container, Content, Icon , InputGroup,Input} from 'native-base';
+import  Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
 class MultiFormGreen extends Component {
