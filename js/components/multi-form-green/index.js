@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute , replaceRoute , pushNewRoute} from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView, TextInput} from 'react-native';
+import Header from '../header/';
 import  Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
@@ -24,9 +25,7 @@ class MultiFormGreen extends Component {
         return (
           <View style={styles.mainContainer}>
             <View style={styles.topBar}>
-              <View style={styles.topBarTop}>
-                  <Text style={styles.projectName}>VITALS 8/20/2016</Text>
-              </View>
+              <Header backButton={false}  title={"VITALS 8/20/2016"} style={styles.headerColor} />
             </View>
             <ScrollView style={styles.scrollView}>
               <View style={styles.columnView}>

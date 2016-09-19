@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute , replaceRoute , pushNewRoute} from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView} from 'react-native';
+import Header from '../header/';
 import  Icon from 'react-native-vector-icons/Ionicons';
 import styles from './style';
 
@@ -29,14 +30,7 @@ class SingleEntry extends Component {
         return (
           <View style={styles.mainContainer}>
             <View style={styles.topBar}>
-              <View style={styles.topBarTop}>
-                  <TouchableOpacity onPress={this.popRoute.bind(this)} style={styles.backIconView}>
-                    <Icon name="md-arrow-round-back" style={styles.backIcon}/>
-                  </TouchableOpacity>
-                  <View style={styles.projectNameView}>
-                    <Text style={styles.projectName}>ID 138503913</Text>
-                  </View>
-              </View>
+              <Header backButton={true} onBack={this.popRoute.bind(this)} title={"ID 138503913"} style={styles.headerColor} />
             </View>
             <ScrollView style={styles.scrollView}>
               <Text style={styles.entryPointHeader}>Single Entry Forms</Text>

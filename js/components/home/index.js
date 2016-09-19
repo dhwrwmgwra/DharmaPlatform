@@ -15,7 +15,7 @@ class Home extends Component {
     }
     gotoLongitudinalProject(){
       console.log("Going to longitudinal");
-      this.props.pushNewRoute('longitudinal-project');
+      this.props.pushNewRoute('longitudinal-project','');
     }
     gotoTimeSeriesProject(){
       this.props.pushNewRoute('time-series-project');
@@ -37,7 +37,7 @@ class Home extends Component {
                 </View>
                 <View style={styles.topBarBottom}>
                   <TouchableOpacity onPress={() => this.replaceRoute('login')}>
-                     <Text style={styles.logout}>Log Out</Text>
+                     <Text style={styles.logout}>Switch user</Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -47,34 +47,34 @@ class Home extends Component {
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
                       <View style={styles.projectC}>
-                        <View style={{width:5,height:5,backgroundColor:'springgreen',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>293 Complete</Text>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
                       </View>
                       <View style={styles.projectP}>
-                        <View style={{width:5,height:5,backgroundColor:'yellow',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>6 In Progress</Text>
+                        <View style={[styles.pills,{backgroundColor:'yellow'}]}></View>
+                        <Text style={styles.pillsText}>6 In Progress</Text>
                       </View>
                       <View style={styles.projectR}>
-                        <View style={{width:5,height:5,backgroundColor:'#FE4D4D',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>399 Remaining</Text>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
                       </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.projectCards} onPress={this.gotoTimeSeriesProject.bind(this)}>
+                <TouchableOpacity style={styles.projectCards} onPress={this.gotoLongitudinalProject.bind(this)}>
                     <Text style={styles.projectTitle}>Logitudinal Project Name</Text>
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
                       <View style={styles.projectC}>
-                        <View style={{width:5,height:5,backgroundColor:'springgreen',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>293 Complete</Text>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
                       </View>
                       <View style={styles.projectP}>
-                        <View style={{width:5,height:5,backgroundColor:'yellow',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>6 In Progress</Text>
+                        <View style={[styles.pills,{backgroundColor:'yellow'}]}></View>
+                        <Text style={styles.pillsText}>6 In Progress</Text>
                       </View>
                       <View style={styles.projectR}>
-                        <View style={{width:5,height:5,backgroundColor:'#FE4D4D',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>399 Remaining</Text>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
                       </View>
                     </View>
                 </TouchableOpacity>
@@ -83,16 +83,16 @@ class Home extends Component {
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
                       <View style={styles.projectC}>
-                        <View style={{width:5,height:5,backgroundColor:'springgreen',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>293 Complete</Text>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
                       </View>
                       <View style={styles.projectP}>
-                        <View style={{width:5,height:5,backgroundColor:'yellow',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>6 In Progress</Text>
+                        <View style={[styles.pills,{backgroundColor:'yellow'}]}></View>
+                        <Text style={styles.pillsText}>6 In Progress</Text>
                       </View>
                       <View style={styles.projectR}>
-                        <View style={{width:5,height:5,backgroundColor:'#FE4D4D',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>399 Remaining</Text>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
                       </View>
                     </View>
                 </TouchableOpacity>
@@ -101,16 +101,16 @@ class Home extends Component {
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
                       <View style={styles.projectC}>
-                        <View style={{width:5,height:5,backgroundColor:'springgreen',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>293 Complete</Text>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
                       </View>
                       <View style={styles.projectP}>
-                        <View style={{width:5,height:5,backgroundColor:'yellow',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>6 In Progress</Text>
+                        <View style={[styles.pills,{backgroundColor:'yellow'}]}></View>
+                        <Text style={styles.pillsText}>6 In Progress</Text>
                       </View>
                       <View style={styles.projectR}>
-                        <View style={{width:5,height:5,backgroundColor:'#FE4D4D',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>399 Remaining</Text>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
                       </View>
                     </View>
                 </TouchableOpacity>
@@ -119,16 +119,16 @@ class Home extends Component {
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
                       <View style={styles.projectC}>
-                        <View style={{width:5,height:5,backgroundColor:'springgreen',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>293 Complete</Text>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
                       </View>
                       <View style={styles.projectP}>
-                        <View style={{width:5,height:5,backgroundColor:'yellow',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>6 In Progress</Text>
+                        <View style={[styles.pills,{backgroundColor:'yellow'}]}></View>
+                        <Text style={styles.pillsText}>6 In Progress</Text>
                       </View>
                       <View style={styles.projectR}>
-                        <View style={{width:5,height:5,backgroundColor:'#FE4D4D',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>399 Remaining</Text>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
                       </View>
                     </View>
                 </TouchableOpacity>
@@ -137,16 +137,16 @@ class Home extends Component {
                     <Text style={styles.projectLocation}>Location,Administrator</Text>
                     <View style={styles.projectCPR}>
                       <View style={styles.projectC}>
-                        <View style={{width:5,height:5,backgroundColor:'springgreen',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>293 Complete</Text>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
                       </View>
                       <View style={styles.projectP}>
-                        <View style={{width:5,height:5,backgroundColor:'yellow',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>6 In Progress</Text>
+                        <View style={[styles.pills,{backgroundColor:'yellow'}]}></View>
+                        <Text style={styles.pillsText}>6 In Progress</Text>
                       </View>
                       <View style={styles.projectR}>
-                        <View style={{width:5,height:5,backgroundColor:'#FE4D4D',borderRadius:5,marginTop:4}}></View>
-                        <Text style={{fontSize:11,color:'rgba(0,0,0,0.666)',marginLeft:4}}>399 Remaining</Text>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
                       </View>
                     </View>
                 </TouchableOpacity>

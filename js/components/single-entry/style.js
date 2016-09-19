@@ -11,9 +11,9 @@ module.exports = StyleSheet.create({
     // backgroundColor:'rgba(52,52,52,1)',
   },
   topBar:{
-    backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     position:'absolute',
-    paddingTop:20,
     left: 0,
     right: 0,
   },
@@ -49,7 +49,7 @@ module.exports = StyleSheet.create({
   },
   scrollView:{
     left:0,
-    marginTop:64,
+    marginTop:55,
     backgroundColor:'rgba(255,255,255,0.9)',
     marginBottom:2,
     padding:10,

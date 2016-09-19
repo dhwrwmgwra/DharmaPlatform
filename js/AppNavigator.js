@@ -18,7 +18,10 @@ import SingleEntry from './components/single-entry';
 import MultiEntryGreen from './components/multi-form-green';
 import MultiEntryRed from './components/multi-form-red';
 import SplashPage from './components/splashscreen/';
+import ExistingRecordHome from './components/existing-record-home/';
+import NewEnrollmentForm from './components/new-enrollment-form/';
 import SideBar from './components/sideBar';
+import CaptureScreen from './components/camera/';
 import { statusBarColor } from "./themes/base-theme";
 
 Navigator.prototype.replaceWithAnimation = function (route) {
@@ -190,6 +193,12 @@ class AppNavigator extends Component {
                 return <MultiEntryRed navigator={navigator} />;
             case 'multi-entry-green':
                 return <MultiEntryGreen navigator={navigator} />;
+            case 'existing-record-home':
+                return <ExistingRecordHome navigator={navigator} />;
+            case 'new-enrollment-form':
+                return <NewEnrollmentForm navigator={navigator} />;
+            case 'camera':
+                return <CaptureScreen navigator={navigator} />;
             default :
                 return <Login navigator={navigator}  />;
         }

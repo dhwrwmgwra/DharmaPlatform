@@ -5,9 +5,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { openDrawer } from '../../actions/drawer';
-import { popRoute , replaceRoute } from '../../actions/route';
+import { popRoute , replaceRoute , pushNewRoute} from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView,TextInput} from 'react-native';
-import  Icon from 'react-native-vector-icons/Ionicons';
+import {MKButton, MKTextField} from 'react-native-material-kit';
+import  Icon from 'react-native-vector-icons/MaterialIcons';
+import Header from '../header/';
 import styles from './styles';
 
 class LongitudinalProject extends Component {
@@ -16,6 +18,15 @@ class LongitudinalProject extends Component {
     }
     gotoSingleEntryOptions(){
       this.props.replaceRoute('single-entry');
+    }
+    gotoNewEnrollmentForm(){
+      this.props.pushNewRoute('new-enrollment-form');
+    }
+    gotoExistingRecordHome(){
+      this.props.pushNewRoute('existing-record-home');
+    }
+    gotoCamera(){
+      this.props.pushNewRoute('camera');
     }
     replaceRoute(route) {
         this.props.pushNewRoute(route);
@@ -28,62 +39,156 @@ class LongitudinalProject extends Component {
         return (
           <View style={styles.mainContainer}>
             <View style={styles.topBar}>
-              <View style={styles.topBarTop}>
-                  <TouchableOpacity onPress={this.popRoute.bind(this)} style={styles.backIconView}>
-                    <Icon name="md-arrow-round-back" style={styles.backIcon}/>
-                  </TouchableOpacity>
-                  <View style={styles.projectNameView}>
-                    <Text style={styles.projectName}>PROJECT NAME RECORDS</Text>
-                  </View>
-              </View>
+              <Header backButton={true} onBack={this.popRoute.bind(this)} title={"PROJECT NAME RECORDS"} style={styles.headerColor} />
               <View style={styles.topBarBottom}>
                 <View style={styles.leftBottomBar}>
-                  <Icon name='md-search' style={styles.searchIcon}/>
+                  <Icon name='search' style={styles.searchIcon}/>
                 </View>
                 <View style={styles.middleBottomBar}>
-                  <TextInput value='Search by identifier or scan code' style={styles.searchBoxStyle}/>
+                  <MKTextField placeholder='Search by identifier or scan code'
+                        tintColor={'transparent'}
+                         style={styles.searchText}
+                         textInputStyle={styles.searchTextInput}
+                         onChangeText={()=>{}} />
                 </View>
-                <View style={styles.rightBottomBar}>
-                  <Icon name='md-qr-scanner' style={styles.qrCodeIcon}/>
-                </View>
+                <TouchableOpacity style={styles.rightBottomBar} onPress={this.gotoCamera.bind(this)}>
+                  <Icon name='photo-camera' style={styles.qrCodeIcon}/>
+                </TouchableOpacity>
               </View>
             </View>
             <ScrollView style={styles.scrollView}>
-              <Text style={styles.textHeader}>Incomplete Forms</Text>
-              <View style={styles.incompleteView}>
-                <Text style={styles.date}>8/16/2016</Text>
-                <Text style={styles.time}>16:25</Text>
-              </View>
-              <View style={styles.incompleteView}>
-                <Text style={styles.date}>8/16/2016</Text>
-                <Text style={styles.time}>16:25</Text>
-              </View>
-              <View style={styles.incompleteView}>
-                <Text style={styles.date}>8/16/2016</Text>
-                <Text style={styles.time}>16:25</Text>
-              </View>
-              <Text style={styles.textHeader}>Completed Forms</Text>
-              <View style={styles.completeView}>
-                <Text style={styles.date2}>8/16/2016</Text>
-                <Text style={styles.time2}>16:25</Text>
-              </View>
-              <View style={styles.completeView}>
-                <Text style={styles.date2}>8/16/2016</Text>
-                <Text style={styles.time2}>16:25</Text>
-              </View>
-              <View style={styles.completeView}>
-                <Text style={styles.date2}>8/16/2016</Text>
-                <Text style={styles.time2}>16:25</Text>
-              </View>
-              <View style={styles.completeView}>
-                <Text style={styles.date2}>8/16/2016</Text>
-                <Text style={styles.time2}>16:25</Text>
+              <View style={styles.scrollViewWrapper}>
+                <TouchableOpacity style={styles.longitudinalProjectView} onPress={this.gotoExistingRecordHome.bind(this)}>
+                  <View style={styles.topLongitudinalProjectView}>
+                    <Text style={styles.activityText}>Last Activity:</Text>
+                    <Text style={styles.activityText}>8/16/2016</Text>
+                  </View>
+                  <View style={styles.bottomLongitudinalProjectView}>
+                    <Text style={styles.projectId}>138503912</Text>
+                    <Text style={styles.identifier}>Identifier 1, Identifier 2</Text>
+                    <View style={styles.projectCPR}>
+                      <View style={styles.projectC}>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
+                      </View>
+                      <View style={styles.projectR}>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+                <View style={styles.divider}></View>
+                <TouchableOpacity style={styles.longitudinalProjectView}>
+                  <View style={styles.topLongitudinalProjectView}>
+                    <Text style={styles.activityText}>Last Activity:</Text>
+                    <Text style={styles.activityText}>8/16/2016</Text>
+                  </View>
+                  <View style={styles.bottomLongitudinalProjectView}>
+                    <Text style={styles.projectId}>138503912</Text>
+                    <Text style={styles.identifier}>Identifier 1, Identifier 2</Text>
+                    <View style={styles.projectCPR}>
+                      <View style={styles.projectC}>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
+                      </View>
+                      <View style={styles.projectR}>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+                <View style={styles.divider}></View>
+                <TouchableOpacity style={styles.longitudinalProjectView}>
+                  <View style={styles.topLongitudinalProjectView}>
+                    <Text style={styles.activityText}>Last Activity:</Text>
+                    <Text style={styles.activityText}>8/16/2016</Text>
+                  </View>
+                  <View style={styles.bottomLongitudinalProjectView}>
+                    <Text style={styles.projectId}>138503912</Text>
+                    <Text style={styles.identifier}>Identifier 1, Identifier 2</Text>
+                    <View style={styles.projectCPR}>
+                      <View style={styles.projectC}>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
+                      </View>
+                      <View style={styles.projectR}>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+                <View style={styles.divider}></View>
+                <TouchableOpacity style={styles.longitudinalProjectView}>
+                  <View style={styles.topLongitudinalProjectView}>
+                    <Text style={styles.activityText}>Last Activity:</Text>
+                    <Text style={styles.activityText}>8/16/2016</Text>
+                  </View>
+                  <View style={styles.bottomLongitudinalProjectView}>
+                    <Text style={styles.projectId}>138503912</Text>
+                    <Text style={styles.identifier}>Identifier 1, Identifier 2</Text>
+                    <View style={styles.projectCPR}>
+                      <View style={styles.projectC}>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
+                      </View>
+                      <View style={styles.projectR}>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.longitudinalProjectView}>
+                  <View style={styles.topLongitudinalProjectView}>
+                    <Text style={styles.activityText}>Last Activity:</Text>
+                    <Text style={styles.activityText}>8/16/2016</Text>
+                  </View>
+                  <View style={styles.bottomLongitudinalProjectView}>
+                    <Text style={styles.projectId}>138503912</Text>
+                    <Text style={styles.identifier}>Identifier 1, Identifier 2</Text>
+                    <View style={styles.projectCPR}>
+                      <View style={styles.projectC}>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
+                      </View>
+                      <View style={styles.projectR}>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+                <View style={styles.divider}></View>
+                <TouchableOpacity style={styles.longitudinalProjectView}>
+                  <View style={styles.topLongitudinalProjectView}>
+                    <Text style={styles.activityText}>Last Activity:</Text>
+                    <Text style={styles.activityText}>8/16/2016</Text>
+                  </View>
+                  <View style={styles.bottomLongitudinalProjectView}>
+                    <Text style={styles.projectId}>138503912</Text>
+                    <Text style={styles.identifier}>Identifier 1, Identifier 2</Text>
+                    <View style={styles.projectCPR}>
+                      <View style={styles.projectC}>
+                        <View style={[styles.pills,{backgroundColor:'springgreen'}]}></View>
+                        <Text style={styles.pillsText}>293 Complete</Text>
+                      </View>
+                      <View style={styles.projectR}>
+                        <View style={[styles.pills,{backgroundColor:'#fe4d4d'}]}></View>
+                        <Text style={styles.pillsText}>399 Remaining</Text>
+                      </View>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+                <View style={styles.divider}></View>
               </View>
             </ScrollView>
-            <TouchableOpacity style={styles.bottomBar} onPress={this.gotoSingleEntryOptions.bind(this)}>
+            <TouchableOpacity style={styles.bottomBar} onPress={this.gotoNewEnrollmentForm.bind(this)}>
               <View style={styles.plusButtonView}>
                 <View style={{width:28,height:28,backgroundColor:'white',borderRadius:30,marginTop:8}}>
-                    <Icon name="md-add" style={styles.addIcon}/>
+                    <Icon name="add" style={styles.addIcon}/>
                 </View>
               </View>
               <View style={styles.newFormView}>

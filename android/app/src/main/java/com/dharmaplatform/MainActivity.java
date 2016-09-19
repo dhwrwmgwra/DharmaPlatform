@@ -1,6 +1,11 @@
 package com.dharmaplatform;
 
 import com.facebook.react.ReactActivity;
+import com.eguma.barcodescanner.BarcodeScanner;
+import com.lwansbrough.RCTCamera.RCTCameraPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.github.xinthink.rnmk.ReactMaterialKitPackage;
+import com.microsoft.codepush.react.CodePush;
 
 public class MainActivity extends ReactActivity {
 

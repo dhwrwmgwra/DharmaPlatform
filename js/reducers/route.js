@@ -14,7 +14,7 @@ const initialState = {
 };
 
 export default function (state:State = initialState, action:Action): State {
-  
+
     if (action.type === PUSH_NEW_ROUTE) {
         globalNav.navigator.push({id: action.route, passProps: action.passProps});
         return {
@@ -24,10 +24,10 @@ export default function (state:State = initialState, action:Action): State {
 
     if (action.type === REPLACE_ROUTE) {
         globalNav.navigator.replaceWithAnimation({id: action.route, passProps: action.passProps});
-        
+
         let routes = state.routes;
         routes.pop();
-        
+
         return {
             routes: [...routes, action.route]
         };
@@ -43,7 +43,7 @@ export default function (state:State = initialState, action:Action): State {
                 globalNav.navigator.push({id: action.route, passProps: action.passProps});
 
             // If top route is home and user navigates to home, do nothing
-            else 
+            else
                 routes = [];
         }
 
@@ -65,10 +65,10 @@ export default function (state:State = initialState, action:Action): State {
 
     if (action.type === POP_ROUTE) {
         globalNav.navigator.pop({passProps: action.passProps});
-        
+
         let routes = state.routes;
         routes.pop();
-        
+
         return {
             routes: routes
         }
@@ -76,10 +76,10 @@ export default function (state:State = initialState, action:Action): State {
 
     if (action.type === POP_TO_ROUTE) {
         globalNav.navigator.popToRoute({id: action.route, passProps: action.passProps});
-        
+
         let routes = state.routes;
         while (routes.pop() !== action.route) {}
-        
+
         return {
             routes: [...routes, action.route]
         }

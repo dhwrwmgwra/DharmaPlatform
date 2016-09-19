@@ -11,9 +11,11 @@ module.exports = StyleSheet.create({
     // backgroundColor:'rgba(52,52,52,1)',
   },
   topBar:{
-    backgroundColor:'#68BD45', flexDirection: 'column', justifyContent: 'space-between',
+    backgroundColor:'#872175',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     position:'absolute',
-    paddingTop:20,
+    top:0,
     left: 0,
     right: 0,
   },
@@ -25,6 +27,9 @@ module.exports = StyleSheet.create({
     marginTop:10,
     marginLeft:10,
     marginBottom:10,
+  },
+  headerColor:{
+    backgroundColor:'#68BD45',
   },
   projectName:{
     alignSelf:'center',
@@ -43,7 +48,7 @@ module.exports = StyleSheet.create({
   },
   scrollView:{
     left:0,
-    marginTop:64,
+    marginTop:55,
     backgroundColor:'rgba(255,255,255,1)',
     marginBottom:40,
   },
@@ -74,12 +79,12 @@ module.exports = StyleSheet.create({
     marginBottom:5,
   },
   bottomBar:{
-    backgroundColor:'#eaeced', flexDirection: 'column', justifyContent: 'space-between',
+    backgroundColor:'#eaeced', justifyContent: 'space-between',
     position:'absolute',
     bottom:0,
     left: 0,
     right: 0,
-    // flexDirection:'row',
+    flexDirection:'row',
     padding:10,
     alignItems: 'flex-end',
     shadowOpacity: 0.523,

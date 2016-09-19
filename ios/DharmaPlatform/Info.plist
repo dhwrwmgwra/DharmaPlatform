@@ -51,6 +51,10 @@
     </dict>
     <key>UIAppFonts</key>
     <array>
+      <string>proximanova-light.otf</string>
+      <string>proximanova-regular.otf</string>
+      <string>proximanova-regularit.otf</string>
+      <string>proximanova-semibold.otf</string>
       <string>Andale Mono.ttf</string>
       <string>Arial Black.ttf</string>
       <string>Arial.ttf</string>

@@ -10,9 +10,10 @@ module.exports = StyleSheet.create({
     flex:1,
   },
   topBar:{
-    backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     position:'absolute',
-    paddingTop:20,
+    paddingTop:0,
     left: 0,
     right: 0,
   },
@@ -125,7 +126,8 @@ module.exports = StyleSheet.create({
     fontSize:13
   },
   bottomBar:{
-    backgroundColor:'#68BD45', flexDirection: 'column', justifyContent: 'space-between',
+    backgroundColor:'#68BD45',
+    justifyContent: 'space-between',
     position:'absolute',
     bottom:0,
     left: 0,
@@ -133,8 +135,6 @@ module.exports = StyleSheet.create({
     height:50,
     flexDirection:'row',
     alignItems: 'center',
-    // width: width/3.6,
-    justifyContent: 'center',
   },
   plusButtonView:{
     flex:1,

@@ -24,7 +24,7 @@ module.exports = StyleSheet.create({
     },
     projectNUsernameView:{
       flexDirection:'column',
-      marginLeft:10,
+      marginLeft:5,
     },
     topBarImageStyle:{
       width:80,
@@ -32,12 +32,14 @@ module.exports = StyleSheet.create({
     },
     username:{
       fontSize:16,
+      fontFamily:'proximanova-regular',
       color:'rgba(255,255,255,0.8)'
     },
     projectName:{
       marginTop:15,
       fontSize:24,
-      fontWeight:'600',
+      fontWeight:'bold',
+      fontFamily:'proximanova-regular',
       color:'white',
     },
     topBarBottom:{
@@ -47,6 +49,7 @@ module.exports = StyleSheet.create({
       paddingTop:3,
       fontSize:12,
       marginBottom:10,
+      fontFamily:'proximanova-regular',
       marginRight:10,
       color:'rgba(255,255,255,0.8)',
     },
@@ -74,13 +77,15 @@ module.exports = StyleSheet.create({
     projectTitle:{
       marginTop:10,
       marginLeft:10,
+      fontFamily:'proximanova-semibold',
       fontSize:16,
-      fontWeight:'600',
       color:'rgba(0,0,0,0.777)',
     },
     projectLocation:{
       marginTop:5,
       marginLeft:10,
+      fontSize:14,
+      fontFamily:'proximanova-regular',
       color:'rgba(0,0,0,0.666)',
     },
     projectCPR:{
@@ -99,5 +104,11 @@ module.exports = StyleSheet.create({
     projectR:{
       flexDirection:'row',
       margin:5
+    },
+    pillsText:{
+      fontSize:11,
+      color:'rgba(0,0,0,0.666)',
+      marginLeft:4,
+      fontFamily:'proximanova-regular',
     },
 });

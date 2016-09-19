@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { openDrawer } from '../../actions/drawer';
 import { popRoute , replaceRoute } from '../../actions/route';
 import { View , Text, TouchableOpacity , ScrollView} from 'react-native';
+import Header from '../header/';
 import  Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 
@@ -29,14 +30,7 @@ class TimeSeriesProject extends Component {
         return (
           <View style={styles.mainContainer}>
             <View style={styles.topBar}>
-            <View style={styles.topBarTop}>
-                <TouchableOpacity onPress={this.popRoute.bind(this)} style={styles.backIconView}>
-                  <Icon name="md-arrow-round-back" style={styles.backIcon}/>
-                </TouchableOpacity>
-                <View style={styles.projectNameView}>
-                  <Text style={styles.projectName}>PROJECT NAME</Text>
-                </View>
-            </View>
+            <Header backButton={true} onBack={this.popRoute.bind(this)} title={"PROJECT NAME"} style={styles.headerColor} />
               <View style={styles.topBarBottom}>
                 <View style={styles.leftBottomBar}>
                   <Text style={{fontSize:15,fontWeight:'600',color:'rgba(0,0,0,0.799)',padding:2}}>Project Name</Text>

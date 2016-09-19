@@ -1,100 +1,157 @@
 
 'use strict';
 
-import {StyleSheet,Platform} from 'react-native';
-var Dimensions = require('Dimensions');
+import {StyleSheet,Platform,Dimensions} from 'react-native';
 var {width, height} = Dimensions.get('window');
-
+import palette from '../palette';
 module.exports = StyleSheet.create({
   mainContainer:{
     flex:1,
     backgroundColor:'rgba(52,52,52,1)',
   },
   topBar:{
-    backgroundColor:'#872175', flexDirection: 'column', justifyContent: 'space-between',
-    position:'absolute',
-    top:20,
-    left: 2,
-    right: 0,
-    width:width-4,
-  },
-  topBarTop:{
-    flex:1,
-    flexDirection: 'row',
-    alignItems: 'center',
+    backgroundColor:'#872175',
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    marginTop:10,
-    marginLeft:10,
-    marginBottom:10,
-  },
-  projectNameView:{
-    flex:6
-  },
-  projectName:{
-    alignSelf:'flex-start',
-    alignItems:'center',
-    color:'rgba(255,255,255,1)',
-    fontSize:18,
-    fontWeight:'400'
-  },
-  backIconView:{
-    flex:1
-  },
-  backIcon:{
-    color:'white',
-    alignSelf:'flex-start',
-    alignItems:'flex-start',
-    fontSize:22,
-    fontWeight:'100'
+    position:'absolute',
+    top:0,
+    left: 0,
+    right: 0,
   },
   topBarBottom:{
     flex:1,
     flexDirection:'row',
     backgroundColor:'white',
     // justifyContent:'space-between',
-    padding:15,
-    shadowOpacity: 0.185,
-    shadowRadius: 1,
+    paddingTop:15,
+    paddingBottom:15,
+    // padding:10,
+    shadowOpacity: 0.123,
+    shadowRadius: 30,
     shadowOffset: {
-         height: 1,
-         width: 0
-       },
+       height: 1,
+       width: 0
+     },
+    elevation:2,
   },
   leftBottomBar:{
     flex:1,
     marginLeft:10,
     marginTop:5,
+    margin:2,
   },
   rightBottomBar:{
     flex:1,
     flexDirection:'row',
     justifyContent:'center',
-    // marginRight:20,
+    marginRight:10,
+    marginTop:5,
+    margin:2,
   },
   middleBottomBar:{
-    flex:6
+    flex:8,
+    marginTop:0,
+    margin:2,
   },
   searchIcon:{
-    color:'rgba(0,0,0,0.5)',
+    color:palette.DharmaLight600,
+    fontSize:30,
   },
-  searchBoxStyle:{
-    height:40,
-    color:'rgba(0,0,0,0.5)',
-    fontSize:14,
-    // padding:20,
-    fontWeight:'800',
-    // width:width-100,
+  searchText:{
+    padding:5,
+  },
+  searchTextInput:{
+    height:30,
+    color:palette.DharmaLight700,
+    fontSize:16,
+    fontFamily:'proximanova-regular',
+    fontWeight:'400',
+    padding:10,
   },
   qrCodeIcon:{
-    color:'rgba(0,0,0,0.5)',
+    color:palette.DharmaLight800,
+    fontSize:30,
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width
+  },
+  capture: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    color: '#000',
+    padding: 10,
+    margin: 40
   },
   scrollView:{
-    left:2,
-    width:width-4,
-    marginTop:150,
+    marginTop:125,
     backgroundColor:'rgba(255,255,255,0.9)',
-    marginBottom:2,
+    marginBottom:50,
     padding:10,
+  },
+  scrollViewWrapper:{
+    padding:10,
+    backgroundColor:'#fff',
+  },
+  longitudinalProjectView:{
+    flexDirection:'column',
+  },
+  topLongitudinalProjectView:{
+    alignSelf:'flex-end',
+    flexDirection:'row',
+  },
+  activityText:{
+    fontSize:11,
+    fontFamily:'proximanova-regular',
+    fontStyle:'italic',
+    color:'rgba(0,0,0,0.567)',
+    paddingLeft:2,
+  },
+  bottomLongitudinalProjectView:{
+  },
+  projectId:{
+    fontFamily:'proximanova-semibold',
+    fontSize:16,
+    color:'rgba(0,0,0,0.8)',
+  },
+  identifier:{
+    fontFamily:'proximanova-regular',
+    fontSize:14,
+    color:'rgba(0,0,0,0.7)',
+    marginTop:2,
+  },
+  projectCPR:{
+    flexDirection:'row',
+    marginLeft:0,
+    marginTop:0,
+  },
+  projectC:{
+    flexDirection:'row',
+    margin:5
+  },
+  projectP:{
+    flexDirection:'row',
+    margin:5
+  },
+  projectR:{
+    flexDirection:'row',
+    margin:5
+  },
+  pillsText:{
+    fontSize:11,
+    color:'rgba(0,0,0,0.666)',
+    marginLeft:4,
+    fontFamily:'proximanova-regular',
+  },
+  divider:{
+    borderWidth:0.5,
+    borderColor:palette.DharmaLight800,
+    marginTop:5,
+    marginBottom:5,
   },
   textHeader:{
     fontSize:18,
@@ -146,17 +203,15 @@ module.exports = StyleSheet.create({
     fontSize:13
   },
   bottomBar:{
-    backgroundColor:'#68BD45', flexDirection: 'column', justifyContent: 'space-between',
+    backgroundColor:palette.DharmaGreen400,
+    justifyContent: 'space-between',
     position:'absolute',
-    bottom:2,
-    left: 2,
+    bottom:0,
+    left: 0,
     right: 0,
-    width:width-4,
     height:50,
     flexDirection:'row',
     alignItems: 'center',
-    // width: width/3.6,
-    justifyContent: 'center',
   },
   plusButtonView:{
     flex:1,
@@ -169,7 +224,7 @@ module.exports = StyleSheet.create({
     color:'#68BD45',
     fontSize:28,
     fontWeight:'600',
-    marginLeft:5,
+    // marginLeft:5,
     // paddingBottom:25,
   },
   newFormView:{
@@ -177,6 +232,13 @@ module.exports = StyleSheet.create({
   },
   newFormText:{
     color:'white',
+    fontFamily:'proximanova-regular',
     fontSize:18,
+  },
+  pills:{
+    width:5,
+    height:5,
+    borderRadius:5,
+    marginTop:(Platform.OS === 'android')?6:3,
   }
 });
