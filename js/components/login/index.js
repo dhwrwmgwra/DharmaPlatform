@@ -17,7 +17,7 @@ class Login extends Component {
             visibleHeight: Dimensions.get('window').height,
             scroll: false,
             username:'User name',
-            password:'Pass word',
+            password:'Password',
             passwordMode:false
         };
     }
